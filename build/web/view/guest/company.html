@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Company Details</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: turquoise;
+        }
+
+        .header {
+            background: violet;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .header .logo img {
+            height: 50px;
+        }
+
+        ul li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: black;
+        }
+
+        .banner {
+            background: pink;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .company-info h2,
+        .company-info p {
+            margin: 0;
+        }
+
+        .company-actions button {
+            margin-left: 10px;
+        }
+
+        .company-general-info,
+        .company-overview,
+        .benefits,
+        .company-location,
+        .company-jobs {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .company-map iframe {
+            border: 0;
+            border-radius: 5px;
+        }
+
+        .job-list .job-item {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .job-list .job-item:last-child {
+            border-bottom: none;
+        }
+
+        .job-list .job-item h4 {
+            margin: 0 0 5px 0;
+        }
+
+        .footer {
+            background: lightgray;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <div class="logo">
+                <a href="#"><img
+                        src="https://static.vecteezy.com/system/resources/previews/002/318/271/original/job-search-icon-free-vector.jpg"
+                        alt="Logo" width="50" height="50"></a>
+            </div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            </nav>
+        </div>
+        <div class="content row">
+            <div class="banner">
+                <div class="company-info">
+                    <h2>Company Name</h2>
+                    <p>Location: City, Country</p>
+                    <p>job openings</p>
+                </div>
+                <div class="company-actions">
+                    <button class="btn btn-primary">Follow</button>
+                </div>
+            </div>
+            
+            <div class="company-info col-md-8">
+                <div class="company-general-info">
+                    <h3>General Information</h3>
+                    <p>Company type: Technology</p>
+                    <p>Company industry: Software Development</p>
+                    <p>Company size: 100-500 employees</p>
+                    <p>Company website: <a href="https://www.companywebsite.com">www.companywebsite.com</a></p>
+                    <p>Company address: 123 Main St, City, Country</p>
+                    <p>Company phone: +123 456 7890</p>
+                    <p>Country: USA</p>
+                    <p>Working days: Monday - Friday</p>
+                </div>
+
+                <div class="company-overview">
+                    <h3>Company Overview</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore
+                        et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                        aliquip
+                        ex ea commodo consequat.</p>
+
+                </div>
+
+                <div class="benefits">
+                    <h3>Why you'll love working here</h3>
+                    <ul>
+                        <li>Competitive salary</li>
+                        <li>Health and wellness programs</li>
+                        <li>Flexible working hours</li>
+                        <li>Opportunities for professional growth</li>
+                    </ul>
+                </div>
+
+                <div class="company-location">
+                    <h3>Company Location</h3>
+                    <p>123 Main St, City, Country</p>
+                    <div class="company-map">
+                        <h3>Location</h3>
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153166!3d-37.81627974202171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6e5b6e8b0c6!2sEnvato!5e0!3m2!1sen!2sau!4v1614031234567!5m2!1sen!2sau"
+                                width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="company-jobs col-md-4">
+                <h3>Job Openings</h3>
+                <div class="job-list">
+                    <div class="job-item">
+                        <h4>Job Title 1</h4>
+                        <p>Location: City</p>
+                        <p>Salary: $X - $Y</p>
+                        <button class="btn btn-primary">Apply Now</button>
+                    </div>
+                    <div class="job-item">
+                        <h4>Job Title 2</h4>
+                        <p>Location: City</p>
+                        <p>Salary: $X - $Y</p>
+                        <button class="btn btn-primary">Apply Now</button>
+                    </div>
+                    <div class="job-item">
+                        <h4>Job Title 3</h4>
+                        <p>Location: City</p>
+                        <p>Salary: $X - $Y</p>
+                        <button class="btn btn-primary">Apply Now</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+
+            <div>
+                <img src="https://static.vecteezy.com/system/resources/previews/002/318/271/original/job-search-icon-free-vector.jpg"
+                    alt="Logo" width="150" height="150">
+                <quote>Connecting Students with Opportunities</quote>
+            </div>
+
+            <div>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:tranquangphong232@gmail.com">tranquangphong232@gmail.com</a>
+            </div>
+            <div>
+                <p>&copy; 2025 Student Job Portal. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Post a Job</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: turquoise;
+        }
+
+        .banner {
+            background: pink;
+        }
+
+        .footer {
+            background: lightgray;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <a href="#"><img
+                        src="https://static.vecteezy.com/system/resources/previews/002/318/271/original/job-search-icon-free-vector.jpg"
+                        alt="Logo" width="50" height="50"></a>
+            </div>
+            <div class="navigation
+">
+                <ul>
+                    <li><a href="#">For Employers</a></li>
+                    <li><a href="#">For Job Seekers</a></li>
+                    <li><a href="#">Signin</a></li>
+                    <li><a href="#">Signup</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Content -->
+        <div class="content">
+            <div class="sidebar" style="width: 20%; float: left; background: lightgray; height: 100vh; padding: 10px;">
+                <h4>Xin chào, Nhà tuyển dụng!</h4>
+                <ul>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Tạo tin tuyển dụng</a></li>
+                    <li><a href="#">Danh sách đăng tin</a></li>
+                    <li><a href="#">Hồ sơ ứng tuyển</a></li>
+                    <li><a href="#">Sửa hồ sơ công ty</a></li>
+                    <li><a href="#">Cài đặt</a></li>
+                </ul>
+            </div>
+            <div class="main-content" style="margin-left: 20%; padding: 10px;">
+                <div class="banner">
+                    <h2>Tạo tin tuyển dụng</h2>
+                    <p>Vui lòng điền thông tin chi tiết về tin tuyển dụng của bạn.</p>
+                </div>
+
+                <div class="form-container">
+                    <form action="postJob" method="post">
+                        <div>
+                            <label for="jobTitle" class="form-label">Job Title: </label>
+                            <input type="text" id="jobTitle" name="jobTitle" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="jobDescription" class="form-label">Job Description: </label>
+                            <input id="jobDescription" name="jobDescription" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="city" class="form-label">Location: </label>
+                            <input type="text" id="city" name="city" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="address" class="form-label">Address: </label>
+                            <input type="text" id="address" name="address" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="shiftInfo" class="form-label">Shift Information: </label>
+                            <input type="text" id="shiftInfo" name="shiftInfo" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="hoursPerWeekMin" class="form-label">Hours Per Week (Min): </label>
+                            <input type="number" id="hoursPerWeekMin" name="hoursPerWeekMin" class="form-control"
+                                required>
+                        </div>
+                        <div>
+                            <label for="hoursPerWeekMax" class="form-label">Hours Per Week (Max): </label>
+                            <input type="number" id="hoursPerWeekMax" name="hoursPerWeekMax" class="form-control"
+                                required>
+                        </div>
+                        <div>
+                            <label class="form-label">Shift Types: </label><br>
+                            <input type="radio" id="isWeekend" name="isWeekend" value="1"> Is Weekend Shift
+                            <input type="radio" id="isEvening" name="isEvening" value="1"> Is Evening Shift
+                        </div>
+                        <div>
+                            <label for="workFormat" class="form-label">Work Format: </label>
+                            <select name="workFormat" id="workFormat" class="form-select"
+                                style="width: 50%; margin-top: 10px;">
+                                <option value="onsite">Onsite</option>
+                                <option value="remote">Remote</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="payType" class="form-label">Pay Type: </label>
+                            <select name="payType" id="payType" class="form-select"
+                                style="width: 50%; margin-top: 10px;">
+                                <option value="hourly">Hourly</option>
+                                <option value="salary">Salary</option>
+                                <option value="negotiable">Negotiable</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="payRate" class="form-label">Salary: </label>
+                            <input type="text" id="payRate" name="payRate" class="form-control" required>
+                        </div>
+
+                        <div>
+                            <label for="salaryMin" class="form-label">Salary (Min): </label>
+                            <input type="text" id="salaryMin" name="salaryMin" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="salaryMax" class="form-label">Salary (Max): </label>
+                            <input type="text" id="salaryMax" name="salaryMax" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="jobRequirements" class="form-label">Job Requirements: </label>
+                            <input id="jobRequirements" name="jobRequirements" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="jobType" class="form-label">Job Type: </label>
+                            <select name="jobType" id="jobType" class="form-select"
+                                style="width: 50%; margin-top: 10px;">
+                                <option value="parttime">Part Time</option>
+                                <option value="flexible">Flexible</option>
+                                <option value="weekend">Weekend</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="numberOfPositions" class="form-label">Số lượng vị trí: </label>
+                            <input type="number" id="numberOfPositions" name="numberOfPositions" class="form-control" required>
+                        </div>
+                        <div>
+                            <label for="benefits" class="form-label">Quyền lợi - Chính sách đãi ngộ: </label>
+                            <input type="text" id="benefits" name="benefits" class="form-control" required>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <input type="submit" value="Post Job" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+</html>

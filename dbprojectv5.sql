@@ -380,9 +380,7 @@ INSERT INTO systemLog (userID, action, description, createdAt) VALUES
 (7, 'APPROVE_APPLICATION', 'Employer duyệt đơn ứng tuyển ID: 1', '2025-10-02 10:00:00');
 
 
--- Reset identity về số cuối cùng hợp lệ
-DBCC CHECKIDENT('jobs', RESEED,0); -- Hoặc số ID cuối cùng hợp lệ
-delete from jobs 
+
 
 GO 
 CREATE OR ALTER TRIGGER TR_jobs_only_approved_employer
@@ -418,3 +416,7 @@ BEGIN
   FROM inserted i;
 END;
 GO
+
+-- Reset identity về số cuối cùng hợp lệ
+--DBCC CHECKIDENT('jobs', RESEED,0); -- Hoặc số ID cuối cùng hợp lệ
+ 
